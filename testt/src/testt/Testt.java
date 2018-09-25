@@ -83,8 +83,11 @@ public class Testt {
                     }                
                 }
                 else if(c=='*'||c=='/'){
-                    while(s1.peek()!=('+')||s1.peek()!=('-')){
+                    while(s1.peek()==('*')||s1.peek()==('/')){
                         str+=s1.pop();
+                        if(s1.isEmpty()){
+                            break;
+                        }
                     }
                     s1.push(c);
                 }
